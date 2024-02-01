@@ -50,7 +50,7 @@ public static class ModelLoader
     /// <returns>The loaded `Model`</returns>
     public static Model Load(string path)
     {
-        using FileStream fileStream = File.Open(path, FileMode.Open);
+        using FileStream fileStream = File.Open(path, FileMode.Open, FileAccess.Read);
         return Load(fileStream);
     }
 
